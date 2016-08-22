@@ -1,3 +1,137 @@
+html, body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+
+li {
+  float: left;
+}
+
+li a{
+  display: inline-block;
+  color: rgb(40,46,56);
+  text-align: centr;
+  padding: 14px 26px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+  color: rgba(166,51,100,0.8);
+}
+
+nav {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  z-index: 9999;
+  background-color: rgba(255,255,255, 0.7);
+}
+
 body{
-  background-color: yellow;
+  background-color: white;
+  margin: 0;
+  margin-top: 0;
+}
+
+.mainPages {
+  margin:0;
+}
+
+#Home {
+  height: 100%;
+  background-image: url("laptop.jpg");
+  left:0;
+  right:0;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+#Home h1 {
+  font-family: 'Lato', sans-serif;
+  vertical-align: middle;
+  padding-top: 500px;
+  text-shadow: 2px 2px 18px #363130;
+  margin-top:0;
+  font-size:60px;
+  font-weight:normal;
+}
+
+#Home p {
+  color: white;
+  font-size: 23px;
+  font-family: 'Poiret One', cursive;
+  text-shadow: 2px 2px 18px #363130;
+}
+
+#About {
+  height: 100%;
+  background-image: url("Contact.jpg");
+  background-size: 100% 100%;
+  padding:100px;
+  text-align:center;
+  font-family: 'Open Sans', sans-serif;
+}
+#About img {
+  float: right;
+
+}
+
+#Portfolio {
+  height: 100%;
+  background-image: url("Coffee.jpeg");
+  font-family: 'Open Sans', sans-serif;
+  text-align: right;
+  padding-top: 100px;
+  padding-right: 80px;
+  margin:20px;
+}
+
+/*#Portfolio h1 {
+  padding-top: 100px;
+  margin: 0;
+}*/
+
+
+#Contact {
+  min-height: 100%;
+  /*background-image: url("Contact.png");*/
+  /*background-size: 100% 100%;*/
+  background: #ebecec;
+  margin:30px;
+  padding-bottom:50px;
+  text-align:center;
+}
+
+#Contact h1 {
+  text-align:left;
+  padding-top:83px;
+  padding-left: 79px;
+  margin:0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.icons {
+  padding:45px 45px 60px;
+  text-align:center;
+  color:white;
+  width:400px;
+  margin:20px;
+  border-radius:30px;
+  display:inline-block;
+}
+
+.icons h2 {
+  font-family: 'Poiret One', cursive;
+  font-size: 35px;
 }
