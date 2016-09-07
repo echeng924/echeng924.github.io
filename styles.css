@@ -14,10 +14,10 @@ li {
   float: left;
 }
 
-li a{
+li a {
   display: inline-block;
   color: rgb(40,46,56);
-  text-align: centr;
+  text-align: center;
   padding: 14px 26px;
   text-decoration: none;
   font-size: 15px;
@@ -89,18 +89,14 @@ body{
 
 #Portfolio {
   height: 100%;
-  background-image: url("Coffee.jpeg");
+  /*background-image: url("Coffee.jpeg");*/
   font-family: 'Open Sans', sans-serif;
-  text-align: right;
+  text-align: left;
   padding-top: 100px;
   padding-right: 80px;
   margin:20px;
 }
 
-/*#Portfolio h1 {
-  padding-top: 100px;
-  margin: 0;
-}*/
 
 
 #Contact {
@@ -134,4 +130,52 @@ body{
 .icons h2 {
   font-family: 'Poiret One', cursive;
   font-size: 35px;
+}
+
+
+@media (min-width: 600px) {
+  li a {
+    font-size: 25px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  nav {
+    height: 4rem;
+  }
+
+  #Home {
+    background-image: no-repeat;
+    background-size: cover;
+    width: 110%;
+    height:110%;
+  }
+  #About {
+    background-image: no-repeat;
+    width: 110%;
+    height: 110%;
+    margin: 0 auto;
+  }
+
+  #About img {
+  margin: 20%;
+  display: block;
+  width: 80%;
+  }
+
+  #Contact {
+    width: 100%;
+    margin: 5%;
+  }
+
+  #Portfolio {
+    height: 110%;
+  }
+
+  #Portfolio img {
+    width:40%;
+    height:20%;
+    margin:2%;
+  }
 }
