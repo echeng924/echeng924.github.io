@@ -20,8 +20,9 @@ li a {
   text-align: center;
   padding: 14px 26px;
   text-decoration: none;
-  font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  vertical-align: center;
 }
 
 a:hover {
@@ -97,7 +98,15 @@ body{
   margin:20px;
 }
 
+#project1 {
+  margin: 1.5rem;
+  display: inline-block;
+}
 
+#project2 {
+  margin: 1.5rem;
+  display: inline-block;
+}
 
 #Contact {
   min-height: 100%;
@@ -173,9 +182,9 @@ body{
     height: 110%;
   }
 
-  #Portfolio img {
+/*  #Portfolio img {
     width:40%;
     height:20%;
     margin:2%;
-  }
+  }*/
 }
