@@ -1,13 +1,91 @@
-html, body {
-  height: 100%;
+body {
+  background-color: rgba(245,245,245, 0.9);
+  margin: 0;
 }
-* {
+div {
   box-sizing: border-box;
 }
+
+#typing-container .top {
+  background-color: grey;
+  width:600px;
+  height: 25px;
+  border-top-left-radius:10px;
+  border-top-right-radius: 10px;
+}
+
+#typing-container {
+  /*height: 350px;*/
+  width: 600px;
+  background-color: rgb(0,0,0);
+  margin: 6rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #000000;
+  display: inline-block;
+  text-align: left;
+}
+
+.terminal {
+  background: rgb(0,0,0);
+  font-size: 16px;
+  overflow: scroll;
+  height: 330px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.terminal .terminal-output div div, .cmd .prompt {
+  line-height: 19px;
+}
+
+div.cmd {
+  font-size: 16px;
+  background-color: rgb(0,0,0);
+}
+
+.typing-body {
+  display:inline-block;
+  color: white;
+  font-size: 16px;
+
+}
+
+#red {
+  background-color: red;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: #54db63;
+}
+
+#typing-container .buttons {
+  border-radius: 50%;
+  height:11px;
+  width: 11px;
+  z-index: 1;
+  float: left;
+  margin: 0.2rem;
+  position: relative;
+  margin-top: 0.3rem;
+}
+
 ul {
   list-style: none;
   text-align: center;
   margin: 0;
+}
+
+.nav li:first-child {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  vertical-align: center;
+  text-align: center;
+  padding: 6px 26px;
 }
 
 li {
@@ -26,7 +104,7 @@ li a {
 }
 
 a:hover {
-  color: rgba(166,51,100,0.8);
+  color: rgba(60,179,113,0.8);
 }
 
 nav {
@@ -36,13 +114,8 @@ nav {
   left: 0;
   right:0;
   z-index: 9999;
-  background-color: rgba(255,255,255, 0.9);
-}
-
-body{
-  background-color: white;
-  margin: 0;
-  margin-top: 0;
+  background-color: rgba(255,255,255,0.8);
+  /*background-color: rgba(245,245,245, 0.9);*/
 }
 
 .mainPages {
@@ -50,141 +123,154 @@ body{
 }
 
 #Home {
-  height: 100%;
-  background-image: url("laptop.jpg");
-  left:0;
-  right:0;
-  color: white;
+  padding:100px 0;
+  left: 0;
+  right: 0;
   text-align: center;
   margin: 0;
-}
-#Home h1 {
-  font-family: 'Lato', sans-serif;
-  vertical-align: middle;
-  padding-top: 500px;
-  text-shadow: 2px 2px 18px #363130;
-  margin-top:0;
-  font-size:60px;
-  font-weight:normal;
+  /*background-image: url('pictures/mountain.jpeg');*/
+  background-size: 100% 100%;
+  width: 100%;
 }
 
-#Home p {
-  color: white;
-  font-size: 23px;
-  font-family: 'Poiret One', cursive;
-  text-shadow: 2px 2px 18px #363130;
+#main-header {
+  font-family: 'Lato', sans-serif;
+  vertical-align: middle;
+  /*text-shadow: 2px 2px 18px #363130;*/
+  font-size:27px;
+  font-weight:normal;
+  text-align: center;
+}
+
+#Home h3 {
+  font-family: 'Lato', sans-serif;
+  vertical-align: middle;
+  /*padding-top: 350px;*/
+  /*text-shadow: 2px 2px 18px #363130;*/
+  margin-top:0;
+  font-size:20px;
+  font-weight:normal;
+  display: inline-block;
 }
 
 #About {
-  height: 100%;
-  background-image: url("Contact.jpg");
-  background-size: 100% 100%;
-  padding:100px;
-  text-align:center;
-  font-family: 'Open Sans', sans-serif;
+  display:flex;
+  font-family: 'Lato', sans-serif;
 }
-#About img {
-  float: right;
 
+#about-container {
+  width:50%;
+  /*padding-top:10px;*/
+  /*background-color: grey;*/
+}
+
+#about-info {
+  margin-top: 10%;
+  /*background-color: grey;*/
+  background-color: yellowgreen;
+  color: white;
+  padding: 20%;
+  text-align: justify;
+}
+
+#About p {
+  line-height: 22px;
+  text-align: justify-all;
+}
+
+#technology-info {
+  width: 50%;
+  margin-top: 10%;
+  padding-left: 5%;
+  padding-top: 5%;
+
+}
+#technology-info p {
+  line-height: 22px;
+}
+
+#profile-pic {
+  margin-top: 5rem;
+  text-align: center;
+}
+#profile-pic img {
+  height:180px;
+  width: 180px;
+  border-radius: 50%;
 }
 
 #Portfolio {
-  height: 100%;
-  /*background-image: url("Coffee.jpeg");*/
-  font-family: 'Open Sans', sans-serif;
-  text-align: left;
-  padding-top: 100px;
-  padding-right: 80px;
-  margin:20px;
+
+  margin-top: 10%;
+  padding-top: 30px;
+  font-family: 'Lato', sans-serif;
+  height:100%;
 }
 
-#project1 {
-  margin: 1.5rem;
-  display: inline-block;
+#projects {
+  width: 100%;
 }
 
-#project2 {
-  margin: 1.5rem;
-  display: inline-block;
+.left-table {
+  width: 50%;
+  /*text-align: center;*/
+}
+
+.right-table {
+  width: 50%;
+  /*text-align: center;*/
+}
+
+#project1 #pong {
+  height: 350px;
+  width: 90%;
+
+}
+
+#pong:hover {
+ opacity: 0.8;
+}
+
+#roadtrip {
+  height: 350px;
+  width: 90%;
+  /*opacity:.5;*/
+}
+
+#roadtrip:hover {
+  opacity: 0.8;
+}
+
+#icebreaker {
+  height: 350px;
+  width: 90%;
+  /*opacity:.5;*/
+}
+
+#icebreaker:hover {
+  opacity: 0.8;
+}
+
+.project-desc {
+  padding: 0 5rem;
 }
 
 #Contact {
-  min-height: 100%;
-  /*background-image: url("Contact.png");*/
-  /*background-size: 100% 100%;*/
-  background: #ebecec;
-  margin:30px;
-  padding-bottom:50px;
-  text-align:center;
+  height: 610px;
+  margin-top: 10%;
+  /*padding-top: 40px;*/
+  font-family: 'Lato', sans-serif;
 }
 
-#Contact h1 {
-  text-align:left;
-  padding-top:83px;
-  padding-left: 79px;
-  margin:0;
-  font-family: 'Open Sans', sans-serif;
+#Contact a {
+  text-decoration: none;
+  color: mediumseagreen;
 }
 
-.icons {
-  padding:45px 45px 60px;
-  text-align:center;
-  color:black;
-  width:400px;
-  margin:20px;
-  border-radius:30px;
-  display:inline-block;
+#footer {
+  padding: 1rem;
+  background-color: mediumseagreen;
+  bottom:0px;
+  left: 0px;
+  right: 0px;
 }
-
-.icons h2 {
-  font-family: 'Poiret One', cursive;
-  font-size: 35px;
-}
-
-
-/*@media (min-width: 600px) {
-  li a {
-    font-size: 22px;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-    text-align: center;
-  }
-
-  nav {
-    height: 4rem;
-  }
-
-  #Home {
-    background-image: no-repeat;
-    background-size: cover;
-    width: 110%;
-    height:110%;
-  }
-  #About {
-    background-image: no-repeat;
-    width: 110%;
-    height: 110%;
-    margin: 0 auto;
-  }
-
-  #About img {
-  margin: 20%;
-  display: block;
-  width: 80%;
-  }
-
-  #Contact {
-    width: 100%;
-    margin: 5%;
-  }
-
-  #Portfolio {
-    height: 110%;
-  }
-
-/*  #Portfolio img {
-    width:40%;
-    height:20%;
-    margin:2%;
-  }*/
-}*/

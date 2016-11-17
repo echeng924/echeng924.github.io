@@ -1,95 +1,186 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>
-    Liz Cheng - About Me!
-  </title>
+  <title>Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script src="js/jquery.terminal-0.11.11.min.js"></script>
+  <script src="js/jquery.mousewheel-min.js"></script>
+  <link href="jquery.terminal-0.11.11.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Poiret+One" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
   <div>
     <nav>
-        <ul>
-          <li><a href="#Home" title="">HOME</a></li>
-          <li><a href="#About" title="">ABOUT</a></li>
-          <li><a href="#Portfolio" title="">PORTFOLIO</a></li>
-          <li><a href="#Contact" title="">CONTACT</a></li>
+        <ul class="nav">
+          <li>Liz Cheng</li>
+          <li><a href="#Home" title="">home</a></li>
+          <li><a href="#About" title="">about</a></li>
+          <li><a href="#Portfolio" title="">portfolio</a></li>
+          <li><a href="#Contact" title="">contact</a></li>
         </ul>
       </nav>
   </div>
 
   <div id="Home" class="mainPages">
-    <div>
-      <h1> Liz Cheng </h1>
+    <div id="main-header">
+      <!-- <h1>Liz Cheng</h1> -->
+      <!-- <h3 id="subtitle">Web Developer / Wanderer </h3> -->
     </div>
-    <div>
-      <p>Aspiring Developer &bull; World Traveler</p>
-    </div>
-  </div>
-  <div id="About" class="mainPages">
 
-    <div style="width:1000px; display:inline-block;">
-      <div style="float:right; width:45%;">
-        <img src="myPic.jpg" alt="Self portrait" border: 0;">
+    <div id="typing-container">
+      <div class="top">
+        <div id="red" class="buttons"></div>
+        <div id="yellow" class="buttons"></div>
+        <div id="green" class="buttons"></div>
       </div>
-      <div style="float:left;width:45%;padding-top:20px;">
-        <h1>ABOUT ME</h1>
-        <p style="text-align:left;">
-          Currently a Web Development Student at General Assembly. <br><br>  What is Lorem Ipsum?
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+      <div id="typing-body"></div>
+        <script>
+          jQuery(document).ready(function($) {
+            $('#typing-body').terminal(function(command, term) {
+            if (command == 'ls') {
+              term.echo("<b style='color:lightgrey;'>available commands are:</b>", { raw:true } );
+              term.echo("<b style='color:mediumorchid;'>git -- link to my github</b>", { raw:true } );
+              term.echo("<b style='color:rebeccapurple;'>resume -- link to my resume</b>", { raw:true } );
+              term.echo("<b style='color:rebeccapurple;'>pong -- to check out my first project</b>", { raw:true } );
+              term.echo("<b style='color:darkslateblue;'>random_face -- generates random expression</b>", { raw:true } );
+              term.echo("<b style='color:darkslateblue;'>clear -- clears the window</b>", { raw:true } );
+            } else if (command =='git'){
+              window.open("https://github.com/echeng924");
+              term.echo("https://github.com/echeng924");
+            } else if (command == 'resume') {
+                window.open("https://drive.google.com/file/d/0B4oeVnwBgNI5NG1sclVBdmIzSmc/view?usp=sharing")
+            } else if (command == 'random_face') {
+              let FaceArray = ["d[o_O]b", "<*_*>", "^_^", "<(o_o)>", "=^..^=", "<('_')>", "@( * O * )@"]
+              let randomFace = FaceArray[Math.floor(Math.random() * FaceArray.length)]
+              term.echo(randomFace);
+          } else if (command == 'pong') {
+              term.echo("<div/>", { raw:true, finalize: function(div){
+                div.append(
+                  $("<iframe src='http://lizcheng.com/project_1/indexPortfolio.html' style='width:500px;height:350px;border:0;'></iframe>")
+                  );
+                }
+              }
+            );
+          }
+         else {
+              term.echo(command + " " + "does not exist, try again!");
+          }
+          }, {
+          greetings: "Hello world! Type ls for commands.",
+          onBlur: function() {
+              // prevent loosing focus
+              return false;
+            }
+          });
+        });
+
+        </script>
+      </div>
+  </div>
+
+  <div id="About" class="mainPages">
+      <div id="about-container">
+        <div id="about-info">
+          <h2>ABOUT ME</h2>
+          <p style="text-align:left;">
+            I'm a full stack web developer based in New York
+            who's main focus is on creating fun, intuitive applications.  I am
+            passionate about clean code, best practices, and quality performance. </br> </br>
+
+            I am constantly working on projects and experimenting
+            with new frameworks and libraries to fuel my curiosity.  I'd love the opportunity to collaborate on additional team projects. </br> </br>
+
+            When I'm not writing code, I'm out in the world in search for the best dessert or debating math questions with first graders.
+          </p>
+        </div>
+      </div>
+      <div id="technology-info">
+        <h2>LANGUAGES/FRAMEWORKS/TECHNOLOGIES:</h2>
+        <p>
+          HTML5, CSS, JavaScript, Ruby, jQuery, ReactJS, Ruby on Rails, Express, Node, SQL </br>
+          </br>
+          Other skills: </br>
+          Financial planning and analysis, variance analysis, cost benefit modeling
         </p>
+        <div id="profile-pic">
+          <img src="pictures/profile-pic.jpg" alt="">
+        </div>
       </div>
-    </div>
   </div>
 
   <div id="Portfolio" class="mainPages">
-      <h1>PROJECTS</h1>
-      <div id="project1">
-        <a href = 'https://echeng924.github.io/project_1/'> Fantastic Pong! </a> <br>
-        <img src="Pong.png" alt="" height="240em" width="360em"> <br>
-      </div>
-      <div id="project2">
-        <a href = 'https://echeng924.github.io/project_1/'> RoadTrips </a> <br>
-        <img src="roadtrip.png" alt="" height="240em" width="360em"> <br>
-      </div>
+    <!-- <div class="portfolio-container"> -->
+    <h1>PROJECTS</h1>
+    <table id="projects">
+      <tr id="project1">
+        <td class="left-table">
+          <img src="pictures/Pong2.png" alt="" id="pong">
+        </td>
+        <td class="right-table project-desc">
+          <h2>Fantastic Pong</h2>
+          <h4>Tasked with creating a game for my first project I chose to recreate the classic Atari game, Pong. I've incorporated a few additional changes to the original game for style and flare. Test it out by playing in the terminal above!</h4>
+          <h4>Technologies used:</h4>
+          <h5>HTML5 Canvas, CSS, JavaScript</h5>
+          <a href="https://github.com/echeng924/project_1">GitHub</a></br>
+          <a href="http://lizcheng.com/project_1/">Live Link!</a>
+        </td>
+      </tr>
+
+      <tr id="project2">
+        <td class="left-table project-desc">
+          <h2>RoadTrips</h2>
+          <h4>The idea behind this project was to create a CRUD (create, read, update, destroy) app where users could sign up and create itineraries for road trips. Along the way they could input specific points of interest they wanted to visit.</h4>
+          <h4>Technologies used:</h4>
+          <h5>HTML5, CSS, JavaScript, ReactJS, Firebase, Google Maps API</h5>
+          <a href="https://github.com/echeng924/project2">GitHub</a></br>
+          <a href="http://lizcheng.com/project2/src/static/#/?_k=okcent">Live Link!</a>
+        </td>
+        <td class="right-table">
+          <img src="pictures/RoadTrips.png" alt="" id="roadtrip">
+        </td>
+      </tr>
+
+      <tr id="project3">
+        <td class="left-table">
+          <img src="pictures/Icebreaker.png" alt="" id="icebreaker">
+        </td>
+        <td class="right-table project-desc">
+          <h2>Irreverent Ice Breaker</h2>
+          <h4>The idea behind this project was to create a CRUD (create, read, update, destroy) app where users could sign up and create itineraries for road trips. Along the way they could input specific points of interest they wanted to visit.</h4>
+          <h4>Technologies used:</h4>
+          <h5>HTML5, CSS, JavaScript, ReactJS, Node, Express, PostgreSQL</h5>
+          <a href="https://github.com/joshlw04/IrreverentIceBreaker">GitHub</a></br>
+          <a href="https://irreverenticebreaker.herokuapp.com/">Live Link!</a>
+        </td>
+      </tr>
+
+<!--         <tr id="project4">
+        <td class="left-table">
+          Project 4 description
+        </td>
+        <td class="right-table">
+          Screenshot 4
+        </td>
+      </tr> -->
+    </table>
   </div>
 
   <div id = "Contact" class="mainPages">
-      <h1> SAY HELLO! </h1> <br> <br>
-      <div>
-        <div class="icons" style="background:#A96580">
-          <h2>EMAIL</h2> <br>
-          <a href="mailto:echeng924@gmail.com">
-            <img src="Email.png" alt="Email">
-          </a>
-        </div>
-        <div class="icons" style="background:#D7D07E">
-          <h2> GITHUB </h2> <br>
-          <a href="https://github.com/echeng924">
-            <img src="GitHub.png" alt="GitHub">
-          </a>
-        </div>
-      </div>
-      <div>
-        <div class="icons" style="background:#BEB2CC">
-          <h2> LINKEDIN</h2> <br>
-          <a href="https://www.linkedin.com/in/elizabeth-cheng-125b745">
-            <img src="LinkedIn.png" alt="LinkedIn">
-          </a>
-        </div>
-        <div class="icons" style="background:#9FC373">
-          <h2> INSTAGRAM</h2> <br>
-          <a href="https://www.instagram.com/eliza924/">
-            <img src="Instagram.png" alt="Instagram">
-          </a>
-        </div>
-      </div>
+    <h1> SAY HELLO! </h1>
+    <h2>
+      Send me a note to say hi at <a href="mailto:echeng924@gmail.com">echeng924@gmail.com</a>.
+    </h2>
+    <h2>
+      Also find me on <a href="https://github.com/echeng924">github</a>, <a href="https://www.linkedin.com/in/elizabeth-cheng-125b745">linkedin</a>, or <a href="https://www.instagram.com/eliza924/">instagram</a>!
+    </h2>
   </div>
-
-
-
+  <div id="footer">
+      <a href="mailto:echeng924@gmail.com"><img src="pictures/email.png" alt="" id="email" class="logos"></a>
+      <a href="https://www.linkedin.com/in/elizabeth-cheng-125b745"><img src="pictures/linkedin-logo-button.png" alt="" id="linkedin" class="logos"></a>
+      <a href="https://github.com/echeng924"><img src="pictures/github.png" alt="" id="github" class="logos"></a>
+      <a href="https://www.instagram.com/eliza924/"><img src="pictures/instagram-logo.png" alt="" id="instagram" class="logos"></a>
+    </div>
 </body>
 </html>
