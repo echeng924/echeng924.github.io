@@ -251,6 +251,16 @@ nav {
   opacity: 0.8;
 }
 
+#kindredtor {
+  height: 350px;
+  width: 90%;
+  /*opacity:.5;*/
+}
+
+#kindredtor:hover {
+  opacity: 0.8;
+}
+
 .project-desc {
   padding: 0 5rem;
 }
