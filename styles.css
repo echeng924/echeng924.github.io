@@ -85,7 +85,7 @@ ul {
   font-size: 25px;
   vertical-align: center;
   text-align: center;
-  padding: 6px 26px;
+  padding: 6px 6px;
 }
 
 li {
@@ -200,8 +200,8 @@ nav {
 }
 
 #Portfolio {
-
   margin-top: 10%;
+  margin-left: 3%;
   padding-top: 30px;
   font-family: 'Lato', sans-serif;
   height:100%;
@@ -259,6 +259,7 @@ nav {
   height: 610px;
   margin-top: 10%;
   /*padding-top: 40px;*/
+  margin-left: 2%;
   font-family: 'Lato', sans-serif;
 }
 
@@ -273,4 +274,9 @@ nav {
   bottom:0px;
   left: 0px;
   right: 0px;
+}
+
+#footer a {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
 }
